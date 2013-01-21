@@ -28,4 +28,10 @@ class gitlab_redmine_common::ubuntu_packages {
     ['ruby','ruby-dev','rubygems','rake']:
       ensure  => installed;
   }
+
+  package {
+    'bundler':
+      ensure   => installed,
+      provider => gem;
+  }
 } # Class:: gitlab_redmine_common::packages
